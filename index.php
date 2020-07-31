@@ -6,6 +6,7 @@
 
 <?php
 echo "HELLO PEOPLE!!";
+echo "BE SAFE!!";
 ?>
 </body>
 </html>
