@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: myweb-deploy
+spec:
+ replicas: 3
+ selector:
+  matchLabels:
+   env: phpweb
+ template:
+  metadata:
+   name: myweb-pod
+   labels:
+    env: phpweb
+  spec:
+   containers:
+   - name: myweb-con
+     imagePullPolicy: Always
+     image: vimal13/apache-webserver-php:v2
